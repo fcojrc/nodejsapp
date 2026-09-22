@@ -3,13 +3,13 @@ job('Aplicacion Node.js DSL') {
     scm {
        git {
         remote {
-            url('https://github.com/macloujulian/nodejsapp.git')
+            url('https://github.com/fcojrc/nodejsapp.git')
         }
         branch('master')
         configure { node ->
             node / 'extensions' / 'hudson.plugins.git.extensions.impl.UserIdentity' {
-                name('macloujulian')
-                email('macloujulian@gmail.com')
+                name('fcojrc')
+                email('fcojrc@yahoo.com.mx')
             }
         }
     }
