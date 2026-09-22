@@ -1,8 +1,8 @@
 job('Aplicacion Node.js DSL') {
     description('Aplicación Node JS DSL para el curso de Jenkins')
     scm {
-        git('https://github.com/fcojrc/nodejsapp.git', 'master') { 
-			remote {
+       git {
+        remote {
             url('https://github.com/macloujulian/nodejsapp.git')
         }
         branch('master')
