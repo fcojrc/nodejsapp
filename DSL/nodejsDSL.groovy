@@ -1,9 +1,16 @@
 job('Aplicacion Node.js DSL') {
     description('Aplicación Node JS DSL para el curso de Jenkins')
     scm {
-        git('https://github.com/fcojrc/nodejsapp.git', 'master') { node ->
-            node / gitConfigName('fcojrc')
-            node / gitConfigEmail('fcojrc@yahoo.com.mx')
+        git('https://github.com/fcojrc/nodejsapp.git', 'master') { 
+			remote {
+            url('https://github.com/macloujulian/nodejsapp.git')
+        }
+        branch('master')
+        configure { node ->
+            node / 'extensions' / 'hudson.plugins.git.extensions.impl.UserIdentity' {
+                name('macloujulian')
+                email('macloujulian@gmail.com')
+            }
         }
     }
     triggers {
