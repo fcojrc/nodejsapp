@@ -49,5 +49,4 @@ job('Aplicacion Node.js Docker DSL') {
         }
     }
 }
-}	
-}}
+}
