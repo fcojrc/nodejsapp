@@ -23,7 +23,7 @@ job('Aplicacion Node.js Docker DSL') {
         dockerBuildAndPublish {
             repositoryName('fcojrc/nodejsapp')
             tag('${GIT_REVISION,length=7}')
-            registryCredentials('356c136a-530c-45ee-ae8a-12c3184b464d')
+            registryCredentials('docker-hub')
             forcePull(false)
             createFingerprints(false)
             skipDecorate()
